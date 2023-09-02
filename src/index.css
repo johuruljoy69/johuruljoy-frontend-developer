@@ -5,24 +5,37 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-};
+}
 
-.tw-menu{
-    @apply inline-flex items-center justify-center p-2 rounded-md text-white hover:text-orange-500  focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-white
+.tw-menu {
+    @apply inline-flex items-center justify-center p-2 rounded-md text-white hover:text-orange-500 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-white
 }
 
 .tw-menu-active {
     @apply underline py-2 px-3
 }
 
-.menu-btn{
+.menu-btn {
     @apply text-white px-2 py-2 bg-orange-500 hover:bg-orange-600 rounded-md
 }
 
-.tw-logo {
-    @apply font-extrabold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent
+.heading {
+    @apply text-white font-bold text-4xl md:text-5xl xl:text-6xl
 }
 
+p {
+    line-height: 1.8;
+    @apply text-sm;
+}
+.showcase{
+    background: url("../src/assets/bg-image.jpg") no-repeat center/cover;
+    height: calc(100vh - 0.1px);
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: calc(100vh - 0.1px);
+    @apply flex items-center justify-center
+}
 .tw-input {
     @apply text-sm text-gray-700 border hover:border-orange-500 lg:w-60;
 }

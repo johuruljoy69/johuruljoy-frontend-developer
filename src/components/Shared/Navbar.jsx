@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { CgClose } from "react-icons/cg";
 import { Transition } from "@headlessui/react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -12,9 +12,7 @@ const Navbar = () => {
     const navItems = <>
         <NavLink className={({ isActive }) => (isActive ? 'tw-menu-active' : 'hover:underline py-2 px-2')} to="/">Home</NavLink>
         <NavLink className={({ isActive }) => (isActive ? 'tw-menu-active' : 'hover:underline py-2 px-2')} to="/contact">Contact Us</NavLink>
-        <div className="">
-            <button className="menu-btn">Shop Now</button>
-        </div>
+
 
     </>
     return (
@@ -24,12 +22,15 @@ const Navbar = () => {
                     {/* Medium and large navbar */}
                     <div className="container mx-auto flex items-center justify-between gap-10">
                         <div className="flex-shrink-0">
-                            <h2 className="text-3xl font-bold text-white">SpaceX</h2>
+                            <Link to='/'><h2 className="text-3xl font-bold text-white">SpaceX</h2></Link>
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-3 text-white">
                                 {navItems}
                             </div>
+                        </div>
+                        <div className="flex-shrink-0 mx-5">
+                            <button className="menu-btn">Shop Now</button>
                         </div>
                     </div>{/*end of  Medium and large navbar */}
 
