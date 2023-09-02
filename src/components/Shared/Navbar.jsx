@@ -10,19 +10,21 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = <>
-        <NavLink className={({ isActive }) => (isActive ? 'tw-menu-bg' : 'hover:bg-orange-600 py-2 px-2')} to="/">Home</NavLink>
-        <NavLink className={({ isActive }) => (isActive ? 'tw-menu-bg' : 'hover:bg-orange-600 py-2 px-2')} to="/shop">Shop</NavLink>
-        <NavLink className={({ isActive }) => (isActive ? 'tw-menu-bg' : 'hover:bg-orange-600 py-2 px-2')} to="/contact">Contact Us</NavLink>
+        <NavLink className={({ isActive }) => (isActive ? 'tw-menu-active' : 'hover:underline py-2 px-2')} to="/">Home</NavLink>
+        <NavLink className={({ isActive }) => (isActive ? 'tw-menu-active' : 'hover:underline py-2 px-2')} to="/contact">Contact Us</NavLink>
+        <div className="">
+            <button className="menu-btn">Shop Now</button>
+        </div>
 
     </>
     return (
-        <nav className="bg-gray-800 w-full fixed z-10">
+        <nav className=" bg-gray-800 w-full fixed z-10">
             <div className="mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Medium and large navbar */}
-                    <div className="flex items-center justify-between gap-16">
+                    <div className="container mx-auto flex items-center justify-between gap-10">
                         <div className="flex-shrink-0">
-                            <h2 className="text-xl font-bold text-white">SpaceX</h2>
+                            <h2 className="text-3xl font-bold text-white">SpaceX</h2>
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-3 text-white">
@@ -31,12 +33,13 @@ const Navbar = () => {
                         </div>
                     </div>{/*end of  Medium and large navbar */}
 
+
                     {/* Mobile and small navbar */}
                     <div className="-mr-2 flex md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             type="button"
-                            className="tw-menu"
+                            className="tw-menu text-white"
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                         >
